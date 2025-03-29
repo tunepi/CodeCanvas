@@ -6,7 +6,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 # install packages
 RUN apk update
-RUN apk add git nodejs npm
+RUN apk add git nodejs npm bash
 
 # install php extensions
 RUN docker-php-ext-install pdo pdo_mysql
