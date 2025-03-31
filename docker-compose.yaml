@@ -35,5 +35,14 @@ services:
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
+      - PMA_ROOT_PASSWORD=root
+  npm:
+    image: node:18-slim
+    ports:
+      - 5173:5173
+    command: npm run dev
+    volumes:
+      - .:/src
+    working_dir: /src
 volumes:
   db-volume:
